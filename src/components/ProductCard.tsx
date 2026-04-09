@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { formatRupiah } from '../data';
 
 interface ProductProps {
@@ -15,8 +16,8 @@ interface ProductProps {
 
 export default function ProductCard({ product }: ProductProps) {
   return (
-    <a 
-      href="#" 
+    <Link 
+      to={`/product/${product.id}`}
       className="bg-white rounded-sm shadow-sm hover:shadow-md hover:-translate-y-[1px] transition-all duration-200 flex flex-col group border border-transparent hover:border-[#ee4d2d]/30"
     >
       {/* Product Image */}
@@ -65,6 +66,6 @@ export default function ProductCard({ product }: ProductProps) {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

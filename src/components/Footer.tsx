@@ -45,7 +45,7 @@ export default function Footer() {
             <div className="grid grid-cols-3 gap-2">
               <div className="bg-white border border-gray-200 p-1 rounded shadow-sm flex items-center justify-center h-8 text-[10px] font-bold text-red-500">J&T</div>
               <div className="bg-white border border-gray-200 p-1 rounded shadow-sm flex items-center justify-center h-8 text-[10px] font-bold text-blue-600">JNE</div>
-              <div className="bg-white border border-gray-200 p-1 rounded shadow-sm flex items-center justify-center h-8 text-[10px] font-bold text-green-600">GOSEND</div>
+              <div className="bg-white border border-gray-200 p-1 rounded shadow-sm flex items-center justify-center h-8 text-[10px] font-bold text-green-600">Translink</div>
             </div>
           </div>
           

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Search, ShoppingCart, Bell, HelpCircle, Globe, ShoppingBag } from 'lucide-react';
 
 export default function Header() {
@@ -40,22 +41,22 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="container mx-auto px-4 py-4 flex items-center gap-4 md:gap-8">
+      <div className="container mx-auto px-4 py-4 flex flex-wrap md:flex-nowrap items-center gap-4 md:gap-8">
         {/* Logo */}
-        <div className="flex items-center gap-2 text-2xl md:text-3xl font-bold tracking-tighter shrink-0 cursor-pointer">
+        <Link to="/" className="flex items-center gap-2 text-2xl md:text-3xl font-bold tracking-tighter shrink-0 cursor-pointer">
           <ShoppingBag size={36} className="md:w-10 md:h-10" />
           <span>Zora</span>
-        </div>
+        </Link>
 
         {/* Search Bar */}
-        <div className="flex-1 flex flex-col gap-1">
+        <div className="flex-1 flex flex-col gap-1 w-full order-last md:order-none">
           <div className="flex bg-white rounded-sm p-1 shadow-sm">
             <input 
               type="text" 
-              className="flex-1 px-3 py-1.5 text-sm text-gray-800 outline-none placeholder:text-gray-400" 
+              className="flex-1 px-3 py-1.5 text-sm text-gray-800 outline-none placeholder:text-gray-400 min-w-0" 
               placeholder="Search for products, brands and shops" 
             />
-            <button className="bg-[#ee4d2d] hover:bg-[#d73f21] transition-colors px-6 py-1.5 rounded-sm flex items-center justify-center">
+            <button className="bg-[#ee4d2d] hover:bg-[#d73f21] transition-colors px-4 md:px-6 py-1.5 rounded-sm flex items-center justify-center shrink-0">
               <Search size={18} className="text-white" />
             </button>
           </div>
@@ -70,7 +71,7 @@ export default function Header() {
         </div>
 
         {/* Cart */}
-        <div className="shrink-0 px-2 cursor-pointer relative group">
+        <div className="shrink-0 px-2 cursor-pointer relative group ml-auto md:ml-0">
           <ShoppingCart size={28} />
           <span className="absolute -top-1 -right-1 bg-white text-[#ee4d2d] text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-[#ee4d2d]">
             3
